@@ -1,0 +1,59 @@
+# Catalogo de competicoes.
+# enabled: true entra no pipeline diario.
+# football-data.org free tier cobre BSA e CL; CLI pode exigir plano pago.
+
+competitions:
+  BSA:
+    name: Campeonato Brasileiro Série A
+    short_name: Brasileirão
+    provider: football_data
+    code: BSA
+    provider_id: 2013
+    area: Brazil
+    type: LEAGUE
+    enabled: true
+    free_tier: true
+    notes: Liga inicial do projeto. 20 clubes, 38 rodadas.
+
+  CLI:
+    name: Copa Libertadores
+    short_name: Libertadores
+    provider: football_data
+    code: CLI
+    provider_id: 2152
+    area: South America
+    type: CUP
+    enabled: false
+    free_tier: false
+    notes: Ative quando o token tiver acesso TIER_TWO+ ou troque o adapter.
+
+  CL:
+    name: UEFA Champions League
+    short_name: Champions League
+    provider: football_data
+    code: CL
+    provider_id: 2001
+    area: Europe
+    type: CUP
+    enabled: false
+    free_tier: true
+    notes: Mesmo schema do Brasileirao. Ative sem mudar codigo.
+
+  EL:
+    name: UEFA Europa League
+    short_name: Europa League
+    provider: football_data
+    code: EL
+    provider_id: 2146
+    area: Europe
+    type: CUP
+    enabled: false
+    free_tier: false
+
+sheet_tabs:
+  matches: matches
+  standings: standings
+  scorers: scorers
+  teams: teams
+  competitions: competitions
+  pipeline_runs: pipeline_runs
